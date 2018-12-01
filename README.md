@@ -1,22 +1,22 @@
-# �ȿ����е�һ��DD�ű�
+# 萌咖大佬的一键DD脚本
 
-## ע��:
-ȫ�Զ���װĬ��root����:``` Vicer ```,��װ��ɺ���������������.
+## 注意:
+全自动安装默认root密码:``` Vicer ```,安装完成后请立即更改密码.
 
-�ܹ�ȫ�Զ���װDebian/Ubuntu/CentOS��ϵͳ.
+能够全自动重装Debian/Ubuntu/CentOS等系统.
 
-ͬʱ�ṩdd��װ������,����: ȫ�Զ��޾�Ԯdd��װwindowsϵͳ
+同时提供dd安装镜像功能,例如: 全自动无救援dd安装windows系统
 
-ȫ�Զ���װCentOSʱĬ���ṩVNC����,��ʹ��VNC Viewer�鿴����,
+全自动安装CentOS时默认提供VNC功能,可使用VNC Viewer查看进度,
 
-VNC�˿�Ϊ``` 1``` ����``` 5901``` ,�����г�������.(�ɹ���VNC���ܻ���ʧ.)
+VNC端口为``` 1``` 或者``` 5901``` ,可自行尝试连接.(成功后VNC功能会消失.)
 
-ĿǰCentOSϵͳֻ֧������汾��װΪ CentOS 6.x �����°汾.
+目前CentOS系统只支持任意版本重装为 CentOS 6.x 及以下版本.
 
-�ر�ע��:OpenVZ���ܲ�����.
+特别注意:OpenVZ构架不适用.
 
 
-## ȷ����װ����������:
+## 确保安装了所需软件:
 
 ``` 
 #Debian/Ubuntu:
@@ -26,7 +26,7 @@ apt-get install -y xz-utils openssl gawk file
 yum install -y xz openssl gawk file
 ``` 
 
-## ��������˴���,������:
+## 如果出现了错误,请运行:
 ``` 
 #Debian/Ubuntu:
 apt-get update
@@ -35,14 +35,14 @@ apt-get update
 yum update
 ``` 
 
-## ����ʹ��ʾ��:
+## 快速使用示例:
 ``` 	
-bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/veip007/InstallNET.sh') -d 8 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh') -d 8 -v 64 -a
 ``` 
 
-## ���ؼ�˵��:
+## 下载及说明:
 ``` 
-wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/veip007/InstallNET.sh' && chmod a+x InstallNET.sh
+wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh' && chmod a+x InstallNET.sh
 ``` 
 ```
 Usage:
@@ -55,43 +55,43 @@ Usage:
                                 -dd/--image
                                 -a/-m
  
-# dist-name: ���а汾����
-# dist-version: ���а汾��
-# -apt/-yum/--mirror : ʹ�ö��徵��
-# -a/-m : ѯ���Ƿ��ܽ���VNC���в���. -a Ϊ����ʾ(һ������ȫ�Զ���װ), -m Ϊ��ʾ.
+# dist-name: 发行版本代号
+# dist-version: 发行版本号
+# -apt/-yum/--mirror : 使用定义镜像
+# -a/-m : 询问是否能进入VNC自行操作. -a 为不提示(一般用于全自动安装), -m 为提示.
 ```
 
-## ʹ��ʾ��:
+## 使用示例:
 ```
-#ʹ��Ĭ�Ͼ���ȫ�Զ���װ
+#使用默认镜像全自动安装
 bash InstallNET.sh -d 8 -v 64 -a
  
-#ʹ���Զ��徵��ȫ�Զ���װ
+#使用自定义镜像全自动安装
 bash InstallNET.sh -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
  
  
-# ����ʾ����,��X.X.X.X�滻Ϊ�Լ����������.
-# --ip-addr :IP Address/IP��ַ
-# --ip-gate :Gateway   /����
-# --ip-mask :Netmask   /��������
+# 以下示例中,将X.X.X.X替换为自己的网络参数.
+# --ip-addr :IP Address/IP地址
+# --ip-gate :Gateway   /网关
+# --ip-mask :Netmask   /子网掩码
  
-#ʹ���Զ��徵���Զ����������ȫ�Զ���װ
+#使用自定义镜像自定义网络参数全自动安装
 #bash InstallNET.sh -u 16.04 -v 64 -a --ip-addr x.x.x.x --ip-gate x.x.x.x --ip-mask x.x.x.x --mirror 'http://archive.ubuntu.com/ubuntu'
  
-#ʹ���Զ����������ȫ�Զ�dd��ʽ��װ
+#使用自定义网络参数全自动dd方式安装
 #bash InstallNET.sh --ip-addr x.x.x.x --ip-gate x.x.x.x --ip-mask x.x.x.x -dd 'https://moeclub.org/get-win7embx86-auto'
  
-#ʹ���Զ����������ȫ�Զ�dd��ʽ��װ�洢�ڹȸ������еľ���(�����ļ�ID�ķ�ʽ)
+#使用自定义网络参数全自动dd方式安装存储在谷歌网盘中的镜像(调用文件ID的方式)
 #bash InstallNET.sh --ip-addr x.x.x.x --ip-gate x.x.x.x --ip-mask x.x.x.x -dd "$(echo "1cqVl2wSGx92UTdhOxU9pW3wJgmvZMT_J" |xargs -n1 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/get-gdlink'))"
  
-#ʹ���Զ����������ȫ�Զ�dd��ʽ��װ�洢�ڹȸ������еľ���
+#使用自定义网络参数全自动dd方式安装存储在谷歌网盘中的镜像
 #bash InstallNET.sh --ip-addr x.x.x.x --ip-gate x.x.x.x --ip-mask x.x.x.x -dd "$(echo "https://drive.google.com/open?id=1cqVl2wSGx92UTdhOxU9pW3wJgmvZMT_J" |xargs -n1 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/get-gdlink'))"
 ```
 
-## һЩ���þ����ַ:
+## 一些可用镜像地址:
 ```
-# �Ƽ�ʹ�ô��� /GoogleDrive/<File_ID> ����, �ٶȸ���.
-# ��ȻҲ����ʹ���Լ�GoogleDrive�д���ľ���,ʹ�÷�ʽ:
+# 推荐使用带有 /GoogleDrive/<File_ID> 链接, 速度更快.
+# 当然也可以使用自己GoogleDrive中储存的镜像,使用方式:
   https://image.moeclub.org/GoogleDrive/<File_ID>
  
 # win7emb_x86.tar.gz:
@@ -103,38 +103,38 @@ bash InstallNET.sh -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
   https://image.moeclub.org/win8.1emb_x64.tar.gz
 ```
 
-## һЩ��ʾ:
+## 一些提示:
 
-�ر�ע��:
+特别注意:
 
-�ȿ��ṩ��dd��װ����
+萌咖提供的dd安装镜像
 
-Զ�̵�½�˺�Ϊ: ```Administrator```
+远程登陆账号为: ```Administrator```
 
-Զ�̵�½����Ϊ: ```Vicer```
+远程登陆密码为: ```Vicer```
 
-���޸���������,�ɷ���ʹ��.(�����Լ�����.)
+仅修改了主机名,可放心使用.(建议自己制作.)
 
-��dd��װϵͳ����ʱ:
+在dd安装系统镜像时:
 
-����Ļ�����ȫ�°�װ,�������VNC,���Կ���ȫ������.
+在你的机器上全新安装,如果你有VNC,可以看到全部过程.
 
-��dd��װ����Ĺ�����,�����߽�����(������һֱ��ʾΪ0%).��ɺ󽫻��Զ�����.
+在dd安装镜像的过程中,不会走进度条(进度条一直显示为0%).完成后将会自动重启.
 
-�����������һ����ʾΪ: ��Starting up the partitioner��
+分区界面标题一般显示为: “Starting up the partitioner“
 
-ʹ�ùȸ������д���ľ���: [�����ƴ�С] ��ȡ�ȸ������ļ���ʱֱ����������
+使用谷歌网盘中储存的镜像: [无限制大小] 获取谷歌网盘文件临时直接下载链接
 
-��ȫ�Զ���װCentOSʱ:
+在全自动安装CentOS时:
 
-������� ��Starting graphical installation�� �������Ʊ���,���ʾ���ڰ�װ.
+如果看到 “Starting graphical installation” 或者类似表达,则表示正在安装.
 
-���������ֻ��Ҫ���ĵȴ���װ��ɼ���.
+正常情况下只需要耐心等待安装完成即可.
 
-�����Ҫ�鿴����,ʹ��VNC Viewer(��������VNC���ӹ���)
+如果需要查看进度,使用VNC Viewer(或者其他VNC连接工具)
 
-������ʾ�е�IP��ַ:�˿ڽ�������.(�˿�һ��Ϊ```1```����```5901```)
+连接提示中的IP地址:端口进行连接.(端口一般为```1```或者```5901```)
 
 
 
-ת�����ȿ�https://moeclub.org/2018/04/03/603/
+转载于萌咖https://moeclub.org/2018/04/03/603/
