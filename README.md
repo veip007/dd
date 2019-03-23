@@ -15,6 +15,26 @@ VNC端口为``` 1``` 或者``` 5901``` ,可自行尝试连接.(成功后VNC功�
 
 特别注意:OpenVZ构架不适用.
 
+## 关于debian8源报错
+
+在脚本中可以添加 --mirror 参数切换源。
+目前可用的源:
+```
+--mirror 'http://cpgs.fdcservers.net/debian/'
+--mirror 'http://proyectos.uls.edu.sv/debian/'
+--mirror 'http://debian.cabletel.com.mk/debian/'
+--mirror 'http://komo.padinet.com/debian/'
+--mirror 'http://www.debian.uz/debian/'
+```
+安装debian8 示例:
+```
+bash InstallNET.sh -d 8 -v 64 -a --mirror 'http://www.debian.uz/debian/'
+```
+安装dd镜像 示例:
+```
+bash InstallNET.sh -dd "[URL]" --mirror 'http://www.debian.uz/debian/'
+```
+
 
 ## 确保安装了所需软件:
 
