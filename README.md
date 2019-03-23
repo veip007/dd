@@ -28,11 +28,11 @@ VNC端口为``` 1``` 或者``` 5901``` ,可自行尝试连接.(成功后VNC功�
 ```
 安装debian8 示例:
 ```
-bash InstallNET.sh -d 8 -v 64 -a --mirror 'http://www.debian.uz/debian/'
+bash InstallNET.sh -d 8 -v 64 -a --mirror 'http://debian.cabletel.com.mk/debian/'
 ```
 安装dd镜像 示例:
 ```
-bash InstallNET.sh -dd "[URL]" --mirror 'http://www.debian.uz/debian/'
+bash InstallNET.sh -dd "[URL]" --mirror 'http://debian.cabletel.com.mk/debian/'
 ```
 
 
@@ -62,7 +62,7 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/veip0
 
 ## 下载及说明:
 ``` 
-wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh' && chmod a+x InstallNET.sh
+wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh' && chmod +x InstallNET.sh
 ``` 
 ```
 Usage:
