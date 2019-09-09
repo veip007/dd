@@ -26,16 +26,16 @@ echo "网关: $GATEWAYIP"
 echo "网络掩码: $NETMASK"
 echo ""
 echo "请选择您需要的镜像包:"
-echo "  1) CentOS 7 (DD)"
-echo "  2) CentOS 6 (阿里云镜像)"
-echo "  3) CentOS 6"
-echo "  4) Debian 7 x32"
-echo "  5) Debian 8 x64"
-echo "  6) Debian 9 x64"
-echo "  7) Debian 10 x64"
-echo "  8) Ubuntu 14.04x64"
-echo "  9) Ubuntu 16.04x64"
-echo "  10) Ubuntu 18.04x64"
+echo "  1) CentOS 7 (DD) 用户名：root 密码：Pwd@CentOS"
+echo "  2) CentOS 6 (阿里云镜像) 用户名：root 密码：MoeClub.org"
+echo "  3) CentOS 6 用户名：root 密码：MoeClub.org"
+echo "  4) Debian 7 x32 用户名：root 密码：MoeClub.org"
+echo "  5) Debian 8 x64 用户名：root 密码：MoeClub.org"
+echo "  6) Debian 9 x64 用户名：root 密码：MoeClub.org"
+echo "  7) Debian 10 x64 用户名：root 密码：cxthhhhh.com"
+echo "  8) Ubuntu 14.04x64 用户名：root 密码：MoeClub.org"
+echo "  9) Ubuntu 16.04x64 用户名：root 密码：MoeClub.org"
+echo "  10) Ubuntu 18.04x64 用户名：root 密码：MoeClub.org"
 echo "  11) 萌咖Win7x64 用户名:Administrator  密码：Vicer"
 echo "  12) Win2019 By:MeowLove  密码：cxthhhhh.com"
 echo "  13) Win2016 By:MeowLove  密码：cxthhhhh.com"
@@ -62,7 +62,7 @@ case $N in
   8) bash InstallNET.sh -u trusty -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
   9) bash InstallNET.sh -u xenial -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
   10) bash InstallNET.sh -u bionic -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
-  11) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/EUXeAeHaWcxHoA34etRizncB8gCA-hOloXzFGcGpLPPuqg?download=1';;
+  11) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://doc-0k-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/5bs49l38tk7tei46libi4ig2pvs7ms7a/1567994400000/17128039988164006870/*/1FXf5FOU0J-V4TVrcAmLNDI--bhl0pLiL?e=download';;
   12) bash Network-Reinstall-System-Modify.sh -Windows_Server_2019 ;;
   13) bash Network-Reinstall-System-Modify.sh -Windows_Server_2016 ;;
   14) bash Network-Reinstall-System-Modify.sh -Windows_Server_2012R2 ;;
