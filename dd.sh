@@ -1,5 +1,5 @@
 #!/bin/sh
- 
+
 MAINIP=$(ip route get 1 | awk '{print $NF;exit}')
 GATEWAYIP=$(ip route | grep default | awk '{print $3}')
 SUBNET=$(ip -o -f inet addr show | awk '/scope global/{sub(/[^.]+\//,"0/",$4);print $4}' | head -1 | awk -F '/' '{print $2}')
@@ -47,7 +47,7 @@ echo "  18) Win7x32 By:不知道作者了  用户名:Administrator  密码：Win
 echo "  19) Win-2003x32 By:老司机  用户名:Administrator  密码：WinSrv2003x86-Chinese"
 echo "  20) Win2008x64 By:老司机  用户名:Administrator  密码：WinSrv2008x64-Chinese"
 echo "  21) Win2012R2x64 By:老司机  用户名:Administrator  密码：WinSrv2012r2"
-echo "  定义安装请使用：bash InstallNET.sh -dd '您的直连'"
+echo "  自定义安装请使用：bash InstallNET.sh -dd '您的直连'"
 echo ""
 echo -n "请输入编号: "
 read N
