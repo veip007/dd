@@ -15,6 +15,11 @@ VNC端口为``` 1``` 或者``` 5901``` ,可自行尝试连接.(成功后VNC功�
 
 特别注意:OpenVZ构架不适用.
 
+## 傻瓜式一键脚本
+```
+wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/veip007/dd/master/dd.sh' && chmod +x dd.sh && ./dd.sh
+```
+
 ## 关于debian8源报错
 
 在脚本中可以添加 --mirror 参数切换源。
