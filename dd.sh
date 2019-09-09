@@ -62,7 +62,7 @@ case $N in
   8) bash InstallNET.sh -u trusty -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
   9) bash InstallNET.sh -u xenial -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
   10) bash InstallNET.sh -u bionic -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
-  11) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://doc-0k-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/5bs49l38tk7tei46libi4ig2pvs7ms7a/1567994400000/17128039988164006870/*/1FXf5FOU0J-V4TVrcAmLNDI--bhl0pLiL?e=download';;
+  11) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/EUXeAeHaWcxHoA34etRizncB8gCA-hOloXzFGcGpLPPuqg?download=1';;
   12) bash Network-Reinstall-System-Modify.sh -Windows_Server_2019 ;;
   13) bash Network-Reinstall-System-Modify.sh -Windows_Server_2016 ;;
   14) bash Network-Reinstall-System-Modify.sh -Windows_Server_2012R2 ;;
