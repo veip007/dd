@@ -74,4 +74,4 @@ case $N in
   20) bash InstallNET.sh -dd 'https://doc-14-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/hc3c6jcthgeec81jnpm72gutreatbqfr/1568131200000/17128039988164006870/*/1wtUWaag5pVwmN-QUfTSJ6xbNWulLbLy-?e=download' ;;
   21) bash InstallNET.sh -dd 'https://doc-0g-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/mj2rq3rmvc5jv0gp8e01e0ncbbrdhe4c/1568131200000/17128039988164006870/*/1GUdLXMwBx4uM8-iBU6ClcD5HRmkURuEl?e=download' ;;
   *) echo "Wrong input!" ;;
-esac
+esac 
