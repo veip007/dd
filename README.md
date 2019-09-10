@@ -17,7 +17,12 @@ VNC端口为``` 1``` 或者``` 5901``` ,可自行尝试连接.(成功后VNC功�
 
 ## 傻瓜式一键脚本
 ```
-wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/master/dd.sh && chmod +x dd.sh && ./dd.sh
+##镜像文件在OneDrive
+wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/master/dd-od.sh && chmod +x dd-od.sh && ./dd-od.sh
+
+##镜像文件在GoogleDrive
+wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/master/dd-gd.sh && chmod +x dd-gd.sh && ./dd-gd.sh
+
 ```
 
 ## 关于debian8源报错
