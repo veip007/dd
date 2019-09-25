@@ -47,6 +47,7 @@ echo "  18) Win7x32 By:不知道作者了  用户名:Administrator  密码：Win
 echo "  19) Win-2003x32 By:老司机  用户名:Administrator  密码：WinSrv2003x86-Chinese"
 echo "  20) Win2008x64 By:老司机  用户名:Administrator  密码：WinSrv2008x64-Chinese"
 echo "  21) Win2012R2x64 By:老司机  用户名:Administrator  密码：WinSrv2012r2"
+echo "  22) CentOS 8 用户名：root 密码：cxthhhhh.com 推荐512M以上使用"
 echo "  自定义安装请使用：bash InstallNET.sh -dd '您的直连'"
 echo ""
 echo -n "请输入编号: "
@@ -73,5 +74,6 @@ case $N in
   19) bash InstallNET.sh -dd 'https://doc-00-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/dajl6n5unjk74l2a45kl9m6mvdd3piiu/1568131200000/17128039988164006870/*/1rzkH24tCtwPvcT3HquoF9tZgcj022voG?e=download' ;;
   20) bash InstallNET.sh -dd 'https://doc-14-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/hc3c6jcthgeec81jnpm72gutreatbqfr/1568131200000/17128039988164006870/*/1wtUWaag5pVwmN-QUfTSJ6xbNWulLbLy-?e=download' ;;
   21) bash InstallNET.sh -dd 'https://doc-0g-08-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/mj2rq3rmvc5jv0gp8e01e0ncbbrdhe4c/1568131200000/17128039988164006870/*/1GUdLXMwBx4uM8-iBU6ClcD5HRmkURuEl?e=download' ;;
+  22) bash Network-Reinstall-System-Modify.sh -CentOS_8 ;;
   *) echo "Wrong input!" ;;
 esac 
