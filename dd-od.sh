@@ -15,7 +15,7 @@ echo "###########################################################"
 echo "#                                                         #"
 echo "#  Auto DD                                                #"
 echo "#                                                         #"
-echo "#  Last Modified: 2019-09-09                              #"
+echo "#  Last Modified: 2019-12-05                              #"
 echo "#  Linux默认密码：MoeClub.org  or  cxthhhhh.com           #"
 echo "#  Supported by MoeClub                                   #"
 echo "#                                                         #"
@@ -70,10 +70,10 @@ case $N in
   15) bash Network-Reinstall-System-Modify.sh -Windows_Server_2008R2 ;;
   16) bash Network-Reinstall-System-Modify.sh -Windows_7_Vienna ;;
   17) bash Network-Reinstall-System-Modify.sh -Windows_Server_2003 ;;
-  18) bash InstallNET.sh -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/EbTzZAGGydxLizEnpUHuOxMB5xQXeobqGZu0K-AeMRz3vA?download=1' ;;
-  19) bash InstallNET.sh -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/ESGlMpUoGRBLqIceOVLllWIB67Hg-H-dRtidPLjZiHwG-g?download=1' ;;
-  20) bash InstallNET.sh -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/EQnjm0D1oA9GiW2Kp2DnYuIBBqLhV-AxR3Y8cAPkkhC3mw?e=4YG80Q' ;;
-  21) bash InstallNET.sh -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/ES0CItHE0oFEnseoBdygVrgBF6cJOw_Jm7PV_vPLWcdaNQ?e=5DEPSh' ;;
+  18) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/EbTzZAGGydxLizEnpUHuOxMB5xQXeobqGZu0K-AeMRz3vA?download=1' ;;
+  19) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/ESGlMpUoGRBLqIceOVLllWIB67Hg-H-dRtidPLjZiHwG-g?download=1' ;;
+  20) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/EQnjm0D1oA9GiW2Kp2DnYuIBBqLhV-AxR3Y8cAPkkhC3mw?e=4YG80Q' ;;
+  21) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/ES0CItHE0oFEnseoBdygVrgBF6cJOw_Jm7PV_vPLWcdaNQ?e=5DEPSh' ;;
   22) bash Network-Reinstall-System-Modify.sh -CentOS_8 ;;
   *) echo "Wrong input!" ;;
 esac
