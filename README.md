@@ -95,6 +95,9 @@ Usage:
 ```
 #使用默认镜像全自动安装
 bash InstallNET.sh -d 8 -v 64 -a
+bash InstallNET.sh -d 9 -v 64 -a
+bash InstallNET.sh -d 10 -v 64 -a
+分别表示自动安装Debian 8x64  9x64 10x64
  
 #使用自定义镜像全自动安装
 bash InstallNET.sh -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
