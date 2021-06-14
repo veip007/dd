@@ -18,6 +18,7 @@ export ipAddr=''
 export ipMask=''
 export ipGate=''
 export Relese=''
+export FirmwareImage=''
 export ddMode='0'
 export setNet='0'
 export setRDP='0'
@@ -125,9 +126,12 @@ while [[ $# -ge 1 ]]; do
       tmpSSL="$1"
       shift
       ;;
-    -firmware)
+    -firmware|--cdimage)
       shift
       IncFirmware="1"
+	  shift
+      FirmwareImage="$1"
+	  shift
       ;;
     --ipv6)
       shift
@@ -420,8 +424,13 @@ else
 fi
 if [[ "$linux_relese" == 'debian' ]]; then
   if [[ "$IncFirmware" == '1' ]]; then
-    wget --no-check-certificate -qO '/boot/firmware.cpio.gz' "http://cdimage.debian.org/cdimage/unofficial/non-free/firmware/${DIST}/current/firmware.cpio.gz"
-    [[ $? -ne '0' ]] && echo -ne "\033[31mError! \033[0mDownload 'firmware' for \033[33m$linux_relese\033[0m failed! \n" && exit 1
+    if [[ "$FirmwareImage" == 'ustc' ]]; then
+      wget --no-check-certificate -qO '/boot/firmware.cpio.gz' "https://mirrors.ustc.edu.cn/debian-cdimage/unofficial/non-free/firmware/${DIST}/current/firmware.cpio.gz"
+      [[ $? -ne '0' ]] && echo -ne "\033[31mError! \033[0mDownload 'firmware' for \033[33m$linux_relese\033[0m failed! \n" && exit 1
+    elif [[ "$FirmwareImage" == '' ]]; then
+      wget --no-check-certificate -qO '/boot/firmware.cpio.gz' "http://cdimage.debian.org/cdimage/unofficial/non-free/firmware/${DIST}/current/firmware.cpio.gz"
+      [[ $? -ne '0' ]] && echo -ne "\033[31mError! \033[0mDownload 'firmware' for \033[33m$linux_relese\033[0m failed! \n" && exit 1
+    fi
   fi
   if [[ "$ddMode" == '1' ]]; then
     vKernel_udeb=$(wget --no-check-certificate -qO- "http://$DISTMirror/dists/$DIST/main/installer-$VER/current/images/udeb.list" |grep '^acpi-modules' |head -n1 |grep -o '[0-9]\{1,2\}.[0-9]\{1,2\}.[0-9]\{1,2\}-[0-9]\{1,2\}' |head -n1)
