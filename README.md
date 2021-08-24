@@ -24,6 +24,11 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/mast
 wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/master/dd-gd.sh && chmod +x dd-gd.sh && ./dd-gd.sh
 
 ```
+DD debian 10示例：
+```
+wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/dd/master/InstallNET.sh && chmod +x InstallNET.sh && ./InstallNET.sh -d 10 -v 64 -p "自定义root密码" -port "自定义ssh端口"
+```
+
 
 ## 关于debian8源报错
 
