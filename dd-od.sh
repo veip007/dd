@@ -88,3 +88,4 @@ case $N in
   18) wget -N --no-check-certificate "https://raw.githubusercontent.com/veip007/dd/master/dd-gd.sh" && chmod +x dd-gd.sh && ./dd-gd.sh ;;
   *) echo "Wrong input!" ;;
 esac
+dddddd
