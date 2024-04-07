@@ -321,7 +321,7 @@ elif [[ "$Relese" == 'CentOS' ]]; then
   dependence wget,awk,grep,sed,cut,cat,lsblk,cpio,gzip,find,dirname,basename,file,xz;
 fi
 [ -n "$tmpWORD" ] && dependence openssl
-[[ -n "$tmpWORD" ]] && myPASSWORD="$(openssl passwd -1 "$tmpWORD")";
+[[ -n "$tmpWORD" ]] && myPASSWORD=`openssl passwd -1 "$tmpWORD"`;
 [[ -z "$myPASSWORD" ]] && myPASSWORD='$1$4BJZaD0A$y1QykUnJ6mXprENfwpseH0';
 
 tempDisk=`getDisk`; [ -n "$tempDisk" ] && IncDisk="$tempDisk"
