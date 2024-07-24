@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-sh_ver="1.0.1"
+sh_ver="1.0.2"
 
 
 
@@ -32,7 +32,7 @@ echo "##############################################################"
 echo "#                                                            #"
 echo "#  Auto DD                                                   #"
 echo "#                                                            #"
-echo "#  Last Modified: 2021-01-25                                 #"
+echo "#  Last Modified: 2024-07-24                                 #"
 echo "#  Linux默认密码：MoeClub.org  or  cxthhhhh.com  or  nat.ee  #"
 echo "#  Supported by MoeClub                                      #"
 echo "#                                                            #"
@@ -78,13 +78,13 @@ case $N in
   8) bash InstallNET.sh -u trusty -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
   9) bash InstallNET.sh -u xenial -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
   10) bash InstallNET.sh -u bionic -v 64 -a --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK ;;
-  11) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://veip-my.sharepoint.com/:u:/g/personal/admin_veip_onmicrosoft_com/EUXeAeHaWcxHoA34etRizncB8gCA-hOloXzFGcGpLPPuqg?download=1';;
-  12) bash Network-Reinstall-System-Modify.sh -Windows_Server_2019 ;;
-  13) bash Network-Reinstall-System-Modify.sh -Windows_Server_2016 ;;
-  14) bash Network-Reinstall-System-Modify.sh -Windows_Server_2012R2 ;;
-  15) bash Network-Reinstall-System-Modify.sh -Windows_Server_2008R2 ;;
-  16) bash Network-Reinstall-System-Modify.sh -Windows_7_Vienna ;;
-  17) bash Network-Reinstall-System-Modify.sh -Windows_Server_2003 ;;
+  11) bash InstallNET.sh --ip-addr $MAINIP --ip-gate $GATEWAYIP --ip-mask $NETMASK -dd 'https://微软.云.eu.org/veip=om=admin_veip_onmicrosoft_com=EUXeAeHaWcxHoA34etRizncB8gCA-hOloXzFGcGpLPPuqg';;
+  12) bash InstallNET.sh -dd https://微软.云.eu.org/veip=om=admin_veip_onmicrosoft_com=EcEL3u4QWFRMvmFuBsL_jGwBep0XEVbSLpDFPeoW4wCNZg ;;
+  13) bash InstallNET.sh -dd https://微软.云.eu.org/veip=om=admin_veip_onmicrosoft_com=ETddFJAGxZ1Apv3-NzeT1AkBTq41BTDKVhISmotNEonkWA ;;
+  14) bash InstallNET.sh -dd https://微软.云.eu.org/veip=om=admin_veip_onmicrosoft_com=Ea01H7hU6yZDlvl4HfTx8KoB5JfvameTZVgxF6YD_SgcOQ ;;
+  15) bash InstallNET.sh -dd https://微软.云.eu.org/veip=om=admin_veip_onmicrosoft_com=EWzpQPJJBG1ImnOlXThuP3ABLbKD3mdP3_UTuV5sFBff0w ;;
+  16) bash InstallNET.sh -dd https://微软.云.eu.org/veip=om=admin_veip_onmicrosoft_com=EUXeAeHaWcxHoA34etRizncB8gCA-hOloXzFGcGpLPPuqg ;;
+  17) bash InstallNET.sh -dd https://微软.云.eu.org/veip=om=admin_veip_onmicrosoft_com=EdaMoFQWmDBMrO-9EOQBgo0BgrzVFIdBtX3rKA7bRH0-7w ;;
   18) wget -N --no-check-certificate "https://raw.githubusercontent.com/veip007/dd/master/dd-gd.sh" && chmod +x dd-gd.sh && ./dd-gd.sh ;;
   *) echo "Wrong input!" ;;
 esac
